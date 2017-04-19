@@ -12,6 +12,7 @@ class Thermometer {
     /* Here celsius is Computed Property
         celsius is being computed from farenheit
     */
+
     var celsius : Double{
         
         get {
