@@ -12,6 +12,8 @@ class LinkedList <T: Equatable> {
 	
 	var head = Node<T>()
 	
+	
+	// Insert Node at begning of List
 	func insert (data: T) {
 		
 		let newNode = Node<T>()
@@ -20,6 +22,7 @@ class LinkedList <T: Equatable> {
 		head = newNode;
 	}
 	
+	// Insert Node at nth postion of List
 	func insertAtNthNode (data : T, n : Int){
 		
 		let newNode = Node<T>()
@@ -34,7 +37,7 @@ class LinkedList <T: Equatable> {
 		}
 		
 		var temp : Node! = head
-		for _ in 1 ..< n-2 {
+		for _ in 0 ..< n-2 {
 			
 			temp = temp.next
 		}
@@ -43,6 +46,32 @@ class LinkedList <T: Equatable> {
 		temp.next = newNode
 		
 	}
+	
+	// Delete Node from nth postion of List
+	func deleateNthNode(n : Int){
+		
+		var temp : Node! = head
+		
+		if (n == 1){
+			
+			head = temp.next!
+			temp = nil
+			return
+		}
+		
+		for _ in 0 ..< n-2 {
+			
+			temp = temp.next
+		}
+		
+		var temp1 : Node! = temp.next
+		temp.next = temp1.next
+		temp1 = nil
+		
+	}
+	
+	
+	// Print elements in Linkedlist
 	
 	func printLinkedList (){
 		

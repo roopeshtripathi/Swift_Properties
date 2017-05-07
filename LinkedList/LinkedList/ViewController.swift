@@ -14,11 +14,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         let myList = LinkedList<String>()
-        myList.insert(data: "10")
-        myList.insert(data: "20")
-        myList.insert(data: "30")
         myList.insert(data: "40")
-		myList.insertAtNthNode(data: "35", n: 3)
+		myList.insert(data: "30")
+		myList.insert(data: "20")
+		myList.insert(data: "10")
+		myList.insertAtNthNode(data: "35", n: 4)
+		myList.deleateNthNode(n: 4)
         myList.printLinkedList()
     }
 
