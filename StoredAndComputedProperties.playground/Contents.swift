@@ -43,3 +43,4 @@ thermometer.celsius
 thermometer.celsius = 36
 thermometer.farenheit
 
+let temp = 102
